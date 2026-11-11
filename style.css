@@ -934,3 +934,155 @@ img {
 .legal-divider {
   color: #334155;
 }
+
+/* ---------------------------------------------------------
+   13. RESPONSIVE DESIGN & MEDIA QUERIES
+   Feature: Responsive layout — page must not break at mobile screen widths
+   Uses Flexbox & Grid adjustments for tablet and mobile devices
+   --------------------------------------------------------- */
+
+/* Offset scroll anchor for sticky navbar */
+html {
+  scroll-padding-top: 80px;
+}
+
+/* --- TABLET BREAKPOINT (max-width: 992px) --- */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 2.75rem;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+/* --- MOBILE LANDSCAPE & SMALL TABLETS (max-width: 768px) --- */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 14px 0;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+  }
+
+  .hero-section {
+    padding: 50px 0 40px;
+  }
+
+  .hero-title {
+    font-size: 2.15rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .preview-body {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-box {
+    padding: 40px 20px;
+  }
+
+  .cta-title {
+    font-size: 1.75rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+  }
+
+  .footer-legal {
+    justify-content: center;
+  }
+}
+
+/* --- SMALL MOBILE SCREENS (max-width: 480px) --- */
+@media (max-width: 480px) {
+  .navbar {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .nav-actions {
+    display: none; /* Keep header clean on ultra-small screens */
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-lg {
+    width: 100%;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-cta,
+  .btn-cta-outline {
+    width: 100%;
+  }
+}
