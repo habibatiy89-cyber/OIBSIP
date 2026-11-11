@@ -197,6 +197,19 @@ img {
   color: var(--color-primary);
 }
 
+.nav-link-highlight {
+  color: var(--color-primary);
+  font-weight: 700;
+  background-color: var(--color-primary-light);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+}
+
+.nav-link-highlight:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
 .nav-actions {
   display: flex;
   align-items: center;
