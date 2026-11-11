@@ -608,3 +608,86 @@ body[data-theme="light"] .moon-icon { display: block; }
   color: var(--color-muted);
   line-height: 1.55;
 }
+
+/* ---------------------------------------------------------
+   8. SKILLS SECTION
+   Feature: Visual grid of categorized technical skills
+   --------------------------------------------------------- */
+.skills-section {
+  background-color: var(--color-bg);
+}
+
+.skills-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 28px;
+}
+
+.skills-category-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+}
+
+.skills-category-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 18px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.category-icon {
+  font-size: 1.6rem;
+}
+
+.category-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.skill-bullet {
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  margin-top: 3px;
+}
+
+.skill-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.skill-level {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  line-height: 1.4;
+  margin-top: 2px;
+}
