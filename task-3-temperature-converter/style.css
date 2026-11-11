@@ -431,3 +431,162 @@ body {
   background-color: var(--border-light);
   color: var(--text-dark);
 }
+
+/* ---------------------------------------------------------
+   8. ABSOLUTE ZERO EDGE CASE ALERT
+   Feature: User-friendly message for temperatures below -273.15°C / 0 K
+   --------------------------------------------------------- */
+.alert-box {
+  background-color: var(--coral-50);
+  border: 1px solid var(--coral-200);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.alert-icon {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.alert-text {
+  font-size: 0.85rem;
+  color: var(--coral-700);
+  line-height: 1.5;
+}
+
+.alert-text strong {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+/* ---------------------------------------------------------
+   9. TEMPERATURE SENSATION / WEATHER FEELING GAUGE
+   Humanized feedback describing how the temperature feels
+   --------------------------------------------------------- */
+.sensation-card {
+  background-color: var(--teal-50);
+  border: 1px solid var(--teal-200);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  transition: var(--transition);
+}
+
+.sensation-emoji {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.sensation-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.sensation-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.sensation-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* ---------------------------------------------------------
+   10. RESULTS DISPLAY AREA (MULTI-UNIT SIMULTANEOUS)
+   Feature: Result display showing all units with correct labels
+   --------------------------------------------------------- */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.result-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 20px 16px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition);
+}
+
+.result-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--sky-500);
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.result-unit-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.result-symbol-badge {
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  background-color: var(--sky-50);
+  color: var(--sky-600);
+}
+
+.result-value-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.result-value {
+  font-family: var(--font-mono);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+}
+
+.result-unit-suffix {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.result-note {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-light);
+}
+
+/* Highlight Source Active Unit Card */
+.result-card.card-source-active {
+  border-color: var(--sky-600);
+  background-color: var(--sky-50);
+}
