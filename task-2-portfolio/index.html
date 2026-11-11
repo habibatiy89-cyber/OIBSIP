@@ -476,11 +476,136 @@
       </div>
     </section>
 
+    <!-- -------------------- CONTACT SECTION -------------------- -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">📬 Get In Touch</span>
+          <h2 class="section-title">Let's Connect &amp; Build Together</h2>
+          <p class="section-subtitle">
+            Whether you have an internship opening, a project collaboration, or just want to discuss frontend ideas, feel free to drop a message!
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Info (Left) -->
+          <div class="contact-info">
+            <h3 class="contact-heading">Let's start a conversation</h3>
+            <p class="contact-lead">
+              I am currently open to internship opportunities, freelance web design, and open-source collaborations. I usually reply within 24 hours!
+            </p>
+
+            <div class="contact-methods">
+              <a href="mailto:developer@digiteach.org" class="contact-method-card">
+                <span class="method-icon">📧</span>
+                <div class="method-details">
+                  <span class="method-label">Email Me</span>
+                  <span class="method-value">developer@digiteach.org</span>
+                </div>
+              </a>
+
+              <div class="contact-method-card">
+                <span class="method-icon">📍</span>
+                <div class="method-details">
+                  <span class="method-label">Location</span>
+                  <span class="method-value">Available Worldwide &bull; Remote</span>
+                </div>
+              </div>
+
+              <div class="contact-method-card">
+                <span class="method-icon">⚡</span>
+                <div class="method-details">
+                  <span class="method-label">Availability</span>
+                  <span class="method-value">Open for Entry-Level &amp; Intern Roles</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="contact-socials-wrapper">
+              <span class="socials-label">Connect across the web:</span>
+              <div class="contact-social-icons">
+                <a href="https://github.com/habibatiy89-cyber" target="_blank" rel="noopener noreferrer" class="social-btn">
+                  <span>GitHub</span> ↗
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn">
+                  <span>LinkedIn</span> ↗
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn">
+                  <span>Twitter</span> ↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form (Right) -->
+          <div class="contact-form-card">
+            <h3 class="form-title">Send a Quick Message</h3>
+            
+            <form id="portfolio-contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Alex Morgan" required>
+                <span class="error-msg" id="name-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="e.g. alex@example.com" required>
+                <span class="error-msg" id="email-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" id="subject" name="subject" class="form-input" placeholder="e.g. Internship Inquiry" required>
+                <span class="error-msg" id="subject-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea id="message" name="message" rows="4" class="form-input form-textarea" placeholder="Write your message here..." required></textarea>
+                <span class="error-msg" id="message-error"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                <span>Send Message</span> &rarr;
+              </button>
+
+              <!-- Form status feedback toast -->
+              <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
-    <!-- Footer content will be placed here -->
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#hero" class="footer-logo">
+          <span class="logo-bracket">&lt;</span>Habiba<span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
+        </a>
+        <p class="footer-text">
+          Crafted with care, semantic HTML5, pure CSS3, and beginner-friendly JavaScript.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-copy">&copy; 2026 Habiba T. &bull; Oasis Infobyte (OIBSIP) Task 2</p>
+        <div class="footer-nav">
+          <a href="#hero" class="footer-nav-link">Back to Top &uarr;</a>
+          <span class="divider">&bull;</span>
+          <a href="../index.html" class="footer-nav-link">Task 1 Landing Page &rarr;</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <!-- JavaScript -->
