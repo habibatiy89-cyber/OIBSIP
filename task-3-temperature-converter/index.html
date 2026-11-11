@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThermoFlow · Temperature Converter Website</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER BAR ==================== -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand">
+        <span class="brand-icon">🌡️</span>
+        <span class="brand-title">ThermoFlow</span>
+      </div>
+      <nav class="header-nav">
+        <a href="../index.html" class="nav-btn">Task 1: Landing Page</a>
+        <a href="../task-2-portfolio/index.html" class="nav-btn">Task 2: Portfolio</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONVERTER CONTAINER ==================== -->
+  <main class="main-wrapper">
+    <div class="converter-card">
+      
+      <!-- Card Title & Subtitle -->
+      <div class="converter-intro">
+        <div class="intro-badge">
+          <span class="badge-dot"></span>
+          <span>Instant &amp; Accurate Conversion</span>
+        </div>
+        <h1 class="converter-title">Temperature Converter</h1>
+        <p class="converter-subtitle">
+          Convert easily between Celsius, Fahrenheit, and Kelvin with real-time feedback and physical boundary alerts.
+        </p>
+      </div>
+
+      <!-- Quick Preset Buttons -->
+      <div class="presets-wrapper">
+        <span class="presets-label">Quick Presets:</span>
+        <div class="presets-buttons">
+          <button type="button" class="preset-btn" data-temp="0" data-unit="celsius">❄️ Freezing (0°C)</button>
+          <button type="button" class="preset-btn active" data-temp="21" data-unit="celsius">🌤️ Room (21°C)</button>
+          <button type="button" class="preset-btn" data-temp="37" data-unit="celsius">🌡️ Body (37°C)</button>
+          <button type="button" class="preset-btn" data-temp="100" data-unit="celsius">🔥 Boiling (100°C)</button>
+        </div>
+      </div>
+
+      <!-- Converter Form -->
+      <form id="temp-converter-form" class="converter-form" novalidate>
+        
+        <!-- Input Row -->
+        <div class="form-row">
+          
+          <!-- Temperature Numeric Input -->
+          <div class="input-group">
+            <label for="temp-input" class="field-label">Degrees to Convert</label>
+            <div class="input-field-wrapper">
+              <input 
+                type="text" 
+                id="temp-input" 
+                class="temp-input" 
+                placeholder="e.g. 21" 
+                value="21"
+                autocomplete="off"
+                aria-describedby="input-error-msg"
+              >
+              <button type="button" id="clear-input-btn" class="clear-input-btn" title="Clear input" aria-label="Clear input">&times;</button>
+            </div>
+            <!-- Error message for non-numeric input -->
+            <p id="input-error-msg" class="field-error-message"></p>
+          </div>
+
+          <!-- Unit Selector (Radio Pills) -->
+          <div class="unit-group">
+            <label class="field-label">From Unit</label>
+            <div class="unit-pills" role="radiogroup" aria-label="Temperature Unit">
+              
+              <label class="unit-pill">
+                <input type="radio" name="temp-unit" value="celsius" checked>
+                <span class="pill-content">
+                  <span class="pill-symbol">°C</span>
+                  <span class="pill-name">Celsius</span>
+                </span>
+              </label>
+
+              <label class="unit-pill">
+                <input type="radio" name="temp-unit" value="fahrenheit">
+                <span class="pill-content">
+                  <span class="pill-symbol">°F</span>
+                  <span class="pill-name">Fahrenheit</span>
+                </span>
+              </label>
+
+              <label class="unit-pill">
+                <input type="radio" name="temp-unit" value="kelvin">
+                <span class="pill-content">
+                  <span class="pill-symbol">K</span>
+                  <span class="pill-name">Kelvin</span>
+                </span>
+              </label>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="actions-row">
+          <button type="submit" id="convert-btn" class="btn btn-convert">
+            <span>Calculate Conversion</span> &rarr;
+          </button>
+          <button type="button" id="reset-btn" class="btn btn-reset">
+            Reset All
+          </button>
+        </div>
+
+      </form>
+
+      <!-- Absolute Zero Edge Case Warning Banner -->
+      <div id="absolute-zero-alert" class="alert-box alert-absolute-zero" role="alert" style="display: none;">
+        <span class="alert-icon">⚠️</span>
+        <div class="alert-text">
+          <strong>Physics Boundary Warning:</strong>
+          <span id="alert-message">This temperature is below Absolute Zero (−273.15°C / −459.67°F / 0 K). In physics, nothing can be colder than this point because particle motion ceases entirely.</span>
+        </div>
+      </div>
+
+      <!-- Humanized Temperature Feeling / Sensation Gauge -->
+      <div class="sensation-card" id="sensation-card">
+        <span class="sensation-emoji" id="sensation-emoji">🌤️</span>
+        <div class="sensation-info">
+          <h3 class="sensation-title" id="sensation-title">Pleasant &amp; Mild Room Temperature</h3>
+          <p class="sensation-desc" id="sensation-desc">Ideal comfortable everyday indoor living condition.</p>
+        </div>
+      </div>
+
+      <!-- Simultaneous Multi-Unit Output Display -->
+      <div class="results-grid">
+        
+        <!-- Output: Celsius -->
+        <div class="result-card" id="card-celsius">
+          <div class="result-header">
+            <span class="result-unit-label">Celsius</span>
+            <span class="result-symbol-badge">°C</span>
+          </div>
+          <div class="result-value-wrapper">
+            <span class="result-value" id="val-celsius">21.00</span>
+            <span class="result-unit-suffix">°C</span>
+          </div>
+          <span class="result-note" id="note-celsius">Water freezes at 0°C, boils at 100°C</span>
+        </div>
+
+        <!-- Output: Fahrenheit -->
+        <div class="result-card" id="card-fahrenheit">
+          <div class="result-header">
+            <span class="result-unit-label">Fahrenheit</span>
+            <span class="result-symbol-badge">°F</span>
+          </div>
+          <div class="result-value-wrapper">
+            <span class="result-value" id="val-fahrenheit">69.80</span>
+            <span class="result-unit-suffix">°F</span>
+          </div>
+          <span class="result-note" id="note-fahrenheit">Water freezes at 32°F, boils at 212°F</span>
+        </div>
+
+        <!-- Output: Kelvin -->
+        <div class="result-card" id="card-kelvin">
+          <div class="result-header">
+            <span class="result-unit-label">Kelvin</span>
+            <span class="result-symbol-badge">K</span>
+          </div>
+          <div class="result-value-wrapper">
+            <span class="result-value" id="val-kelvin">294.15</span>
+            <span class="result-unit-suffix">K</span>
+          </div>
+          <span class="result-note" id="note-kelvin">Absolute zero starts at 0 K</span>
+        </div>
+
+      </div>
+
+      <!-- Educational Conversion Formulas Accordion -->
+      <details class="formula-details">
+        <summary class="formula-summary">
+          <span>📐 How are these values calculated? (Formulas)</span>
+        </summary>
+        <div class="formula-content">
+          <div class="formula-item">
+            <strong>Celsius to Fahrenheit:</strong>
+            <code>°F = (°C &times; 9/5) + 32</code>
+          </div>
+          <div class="formula-item">
+            <strong>Celsius to Kelvin:</strong>
+            <code>K = °C + 273.15</code>
+          </div>
+          <div class="formula-item">
+            <strong>Fahrenheit to Celsius:</strong>
+            <code>°C = (°F &minus; 32) &times; 5/9</code>
+          </div>
+          <div class="formula-item">
+            <strong>Kelvin to Celsius:</strong>
+            <code>°C = K &minus; 273.15</code>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="app-footer">
+    <p>&copy; 2026 ThermoFlow &bull; Built for Oasis Infobyte (OIBSIP) Task 3</p>
+    <p class="footer-tagline">Natural temperature interface designed with accessible, friendly HTML, CSS &amp; JavaScript.</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
