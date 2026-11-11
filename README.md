@@ -1,25 +1,30 @@
 # OIBSIP - Web Development Internship
 
-## Task 1 · Landing Page
+Welcome to my project repository for the **Oasis Infobyte (OIBSIP) Web Development Internship**.
 
-### 📌 Project Overview
-This project is a visually polished, modern, and fully responsive static landing page built as part of the Oasis Infobyte (OIBSIP) Web Development Internship program.
+---
 
-### 🛠️ Tech Stack
-- **HTML5**: Semantic markup for accessible and structured content.
-- **CSS3**: Modern layouts using Flexbox and CSS Grid (no JavaScript required).
+## 📑 Completed Tasks Overview
 
-### ✨ Features Checklist
-- [x] **Sticky Navigation Bar**: Remains fixed at the top with navigation links and brand logo.
-- [x] **Hero Section**: Engaging headline, subheadline, and primary Call-to-Action (CTA) button.
-- [x] **Features Section**: Grid of key features highlighting product benefits with clean cards.
-- [x] **About & Stats Section**: Context about the brand with key performance metrics.
-- [x] **Testimonials Section**: Customer reviews highlighting trust and credibility.
-- [x] **Footer**: Comprehensive footer with quick links, social media channels, and copyright notice.
-- [x] **Consistent Colour Palette**: Cohesive design using CSS custom variables.
-- [x] **Fully Responsive**: Seamlessly adapts across mobile, tablet, and desktop screens.
-- [x] **No Element Overlap**: Strict box-sizing, margin, and padding resets applied throughout.
-- [x] **Clean Typography**: Readable hierarchy using heading and body font scales.
+| Task | Title | Tech Stack | Status | Directory |
+| :--- | :--- | :--- | :---: | :--- |
+| **Task 1** | **Landing Page** | HTML5, CSS3 | ✅ Completed | Root (`index.html`, `style.css`) |
+| **Task 2** | **Personal Portfolio** | HTML5, CSS3, JavaScript | ✅ Completed | [`task-2-portfolio/`](./task-2-portfolio/) |
+
+---
+
+## 📌 Task 1 · Landing Page
+A modern, polished, and fully responsive static landing page for **TaskFlow** (a smart project management workspace).
+- **Features**: Sticky navbar, hero section with board preview, features grid, about & metrics, testimonials, CTA banner, and 4-column footer.
+- **Tech Stack**: Pure HTML5 & CSS3 (no frameworks, no JavaScript).
+
+---
+
+## 📌 Task 2 · Personal Portfolio
+A humanized, beginner-friendly digital résumé and portfolio showcasing skills, projects, and contact information with interactive JavaScript enhancements.
+- **Features**: Profile/hero with avatar, humanized About Me with personal background & hobbies, technical skills grid, featured projects with GitHub links, interactive contact form with instant validation feedback, dark/light theme toggle, and smooth scrolling.
+- **Tech Stack**: HTML5, CSS3, Vanilla JavaScript.
+
 
 ### 📂 File Structure
 ```
