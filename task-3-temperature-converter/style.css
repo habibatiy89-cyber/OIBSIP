@@ -1,0 +1,200 @@
+/* =========================================================
+   THERMOFLOW · TEMPERATURE CONVERTER STYLESHEET
+   Tech Stack: HTML5, CSS3, JavaScript (Vanilla)
+   Palette: Natural Ocean Teal & Warm Coral/Amber
+   * NO Black and NO Purple used *
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. CSS RESET & GLOBAL SIZING
+   --------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------
+   2. NATURAL TEMPERATURE COLOR SYSTEM (NO BLACK, NO PURPLE)
+   --------------------------------------------------------- */
+:root {
+  /* Cool Temperature Theme (Sky & Ocean Teal) */
+  --teal-50: #f0fdfa;
+  --teal-100: #ccfbf1;
+  --teal-200: #99f6e4;
+  --teal-600: #0d9488;
+  --teal-700: #0f766e;
+
+  /* Warm Temperature Theme (Warm Coral & Sunburst Amber) */
+  --coral-50: #fff7ed;
+  --coral-100: #ffedd5;
+  --coral-200: #fed7aa;
+  --coral-500: #f97316;
+  --coral-600: #ea580c;
+  --coral-700: #c2410c;
+
+  /* Sky Blue Accents */
+  --sky-50: #f0f9ff;
+  --sky-100: #e0f2fe;
+  --sky-500: #0ea5e9;
+  --sky-600: #0284c7;
+
+  /* Clean Neutrals (Warm Slate & Crisp White - No Pure Black) */
+  --bg-page: #f8fafc;
+  --bg-card: #ffffff;
+  --border-light: #e2e8f0;
+  --border-focus: #0284c7;
+  --text-dark: #1e293b;
+  --text-body: #475569;
+  --text-muted: #64748b;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+  --shadow-card: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 20px 30px -10px rgba(15, 23, 42, 0.12);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Fonts */
+  --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------------------------------------------------------
+   3. BASE STYLES & LAYOUT WRAPPER
+   --------------------------------------------------------- */
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-page);
+  color: var(--text-body);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: radial-gradient(circle at 10% 10%, rgba(2, 132, 199, 0.05) 0%, transparent 40%),
+                    radial-gradient(circle at 90% 90%, rgba(234, 88, 12, 0.05) 0%, transparent 40%);
+}
+
+/* ---------------------------------------------------------
+   4. APP HEADER BAR
+   --------------------------------------------------------- */
+.app-header {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-light);
+  padding: 14px 24px;
+}
+
+.header-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.brand-icon {
+  font-size: 1.4rem;
+}
+
+.header-nav {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-btn {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--sky-600);
+  background-color: var(--sky-50);
+  border: 1px solid var(--sky-100);
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.nav-btn:hover {
+  background-color: var(--sky-600);
+  color: #ffffff;
+}
+
+/* ---------------------------------------------------------
+   5. CENTERED MAIN CONVERTER WRAPPER
+   --------------------------------------------------------- */
+.main-wrapper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+}
+
+.converter-card {
+  width: 100%;
+  max-width: 680px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 44px;
+  box-shadow: var(--shadow-card);
+}
+
+/* Card Intro */
+.converter-intro {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.intro-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--teal-50);
+  border: 1px solid var(--teal-200);
+  color: var(--teal-700);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+}
+
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  background-color: var(--teal-600);
+  border-radius: 50%;
+}
+
+.converter-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.converter-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 500px;
+  margin: 0 auto;
+}
