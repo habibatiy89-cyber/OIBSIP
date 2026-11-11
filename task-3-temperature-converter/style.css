@@ -664,3 +664,69 @@ body {
   color: var(--text-muted);
   margin-top: 4px;
 }
+
+/* ---------------------------------------------------------
+   13. RESPONSIVE DESIGN & MOBILE MEDIA QUERIES
+   --------------------------------------------------------- */
+@media (max-width: 640px) {
+  .main-wrapper {
+    padding: 24px 14px;
+  }
+
+  .converter-card {
+    padding: 24px 18px;
+    border-radius: var(--radius-md);
+  }
+
+  .converter-title {
+    font-size: 1.75rem;
+  }
+
+  .converter-subtitle {
+    font-size: 0.88rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .presets-wrapper {
+    padding: 10px 12px;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .result-card {
+    padding: 16px 14px;
+  }
+
+  .result-value {
+    font-size: 1.6rem;
+  }
+
+  .formula-content {
+    grid-template-columns: 1fr;
+  }
+
+  .actions-row {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .header-container {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .header-nav {
+    width: 100%;
+    justify-content: center;
+  }
+}
