@@ -723,3 +723,214 @@ img {
   font-size: 0.8rem;
   color: var(--color-muted);
 }
+
+/* ---------------------------------------------------------
+   11. CALL-TO-ACTION (CTA) BANNER
+   High-converting conversion block before footer
+   --------------------------------------------------------- */
+.cta-section {
+  padding: 60px 0 90px;
+  background-color: var(--color-surface);
+}
+
+.cta-box {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #312e81 100%);
+  border-radius: var(--radius-lg);
+  padding: 64px 36px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.25);
+}
+
+.cta-title {
+  color: #ffffff;
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 600px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-cta {
+  background-color: #ffffff;
+  color: var(--color-primary);
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.btn-cta:hover {
+  background-color: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cta-outline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.btn-cta-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.cta-footnote {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ---------------------------------------------------------
+   12. FOOTER
+   Feature: Footer with placeholder contact, quick links, and social channels
+   --------------------------------------------------------- */
+.footer {
+  background-color: var(--color-dark);
+  color: #94a3b8;
+  padding: 80px 0 40px;
+  border-top: 1px solid #1e293b;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.3fr;
+  gap: 48px;
+  margin-bottom: 56px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.footer-desc {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #94a3b8;
+  max-width: 320px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  padding: 6px 14px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  transition: var(--transition);
+}
+
+.social-link:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-heading {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-link {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  transition: var(--transition);
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  padding-left: 4px;
+}
+
+.contact-item {
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+}
+
+.legal-link {
+  color: #64748b;
+}
+
+.legal-link:hover {
+  color: #cbd5e1;
+}
+
+.legal-divider {
+  color: #334155;
+}
