@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // If all fields are valid, show encouraging feedback
       if (isValid) {
         feedbackEl.className = 'form-feedback success';
-        feedbackEl.innerHTML = `🎉 Thank you, <strong>${escapeHTML(nameVal)}</strong>! Your message has been sent. I will get back to you within 24 hours.`;
+        feedbackEl.innerHTML = ` Thank you, <strong>${escapeHTML(nameVal)}</strong>! Your message has been sent. I will get back to you within 24 hours.`;
         
         // Reset form inputs
         contactForm.reset();

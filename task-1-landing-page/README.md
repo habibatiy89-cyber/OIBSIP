@@ -1,17 +1,17 @@
 # Task 1 · Landing Page
 
-## 📌 Project Overview
-This is a visually polished, modern, and fully responsive static landing page built for **TaskFlow** — a smart project and team workspace. It was created as part of the **Oasis Infobyte (OIBSIP) Web Development Internship**.
+##  Project Overview
+This is a visually polished, modern, and fully responsive static landing page built for **TaskFlow** — a smart project and team workspace. 
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 - **HTML5**: Semantic elements (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`).
 - **CSS3**: Modern layouts using Flexbox and CSS Grid (no JavaScript required).
 
 ---
 
-## ✨ Features Checklist
+##  Features Checklist
 - [x] **Sticky Navigation Bar**: Fixed at the top with brand logo, smooth scroll navigation links, and a call-to-action button.
 - [x] **Hero Section**: Engaging headline, subheadline, status pill badge, dual CTA buttons, trust indicators, and a Kanban board preview card.
 - [x] **Features Section**: 6-card responsive CSS grid highlighting core platform capabilities with hover effects.
@@ -26,7 +26,7 @@ This is a visually polished, modern, and fully responsive static landing page bu
 
 ---
 
-## 📂 File Structure
+##  File Structure
 ```
 task-1-landing-page/
 ├── index.html       # Landing page HTML5 document
@@ -35,7 +35,3 @@ task-1-landing-page/
 ```
 
 ---
-
-## 🚀 How to Run
-1. Open this folder in VS Code.
-2. Right-click `index.html` and select **"Open with Live Server"** (or double-click `index.html` to open it in your browser).

@@ -1,14 +1,14 @@
 /**
  * =========================================================
  * THERMOFLOW · TEMPERATURE CONVERTER JAVASCRIPT
- * Pure Vanilla JavaScript (Beginner-Friendly & Documented)
+ * Pure Vanilla JavaScript 
  * 
  * Features:
  * 1. Accurate Conversion between Celsius, Fahrenheit, and Kelvin
  * 2. Strict Numeric Input Validation with User-Friendly Errors
  * 3. Simultaneous Multi-Unit Output Display
  * 4. Absolute Zero Physical Boundary Edge Case Handling
- * 5. Humanized Temperature Sensation / Feeling Indicator
+ * 5. Feeling Indicator
  * 6. Quick Preset Buttons & Reset Functionality
  * =========================================================
  */
@@ -101,30 +101,30 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------------------------------
   function updateSensation(celsius, isBelowAbsoluteZero) {
     if (isBelowAbsoluteZero) {
-      sensationEmojiEl.textContent = '🌌';
+      sensationEmojiEl.textContent = 
       sensationTitleEl.textContent = 'Below Absolute Zero (Hypothetical)';
       sensationDescEl.textContent = 'Colder than deep space. Particle kinetic energy is theoretically zero at 0 K.';
       return;
     }
 
     if (celsius < -50) {
-      sensationEmojiEl.textContent = '🧊';
+      
       sensationTitleEl.textContent = 'Extreme Polar Freeze';
       sensationDescEl.textContent = 'Equivalent to the Antarctic winter. Unprotected exposure is hazardous.';
     } else if (celsius <= 0) {
-      sensationEmojiEl.textContent = '❄️';
+      
       sensationTitleEl.textContent = 'Freezing Cold';
       sensationDescEl.textContent = 'Water turns into ice at or below 0°C. Heavy winter gear needed.';
     } else if (celsius < 15) {
-      sensationEmojiEl.textContent = '🧣';
+      
       sensationTitleEl.textContent = 'Crisp & Chilly';
       sensationDescEl.textContent = 'Brisk morning air. Sweaters and warm layers are recommended.';
     } else if (celsius <= 25) {
-      sensationEmojiEl.textContent = '🌤️';
+      
       sensationTitleEl.textContent = 'Pleasant & Mild Room Temperature';
       sensationDescEl.textContent = 'Ideal, comfortable everyday living and working temperature.';
     } else if (celsius <= 36) {
-      sensationEmojiEl.textContent = '☀️';
+      
       sensationTitleEl.textContent = 'Warm Summer Weather';
       sensationDescEl.textContent = 'Great weather for a swim or outdoor walk. Remember to stay hydrated.';
     } else if (celsius < 50) {
@@ -132,11 +132,11 @@ document.addEventListener('DOMContentLoaded', () => {
       sensationTitleEl.textContent = 'Hot / Human Body Core & Fever';
       sensationDescEl.textContent = 'Normal human body core is ~37°C. Ambient air this hot requires shade and water.';
     } else if (celsius < 100) {
-      sensationEmojiEl.textContent = '🏜️';
+      
       sensationTitleEl.textContent = 'Scalding & Near Boiling';
       sensationDescEl.textContent = 'Dangerously hot water. Capable of instant burns.';
     } else {
-      sensationEmojiEl.textContent = '🔥';
+      
       sensationTitleEl.textContent = 'Boiling Point of Water or Higher';
       sensationDescEl.textContent = 'Liquid water turns to steam at 100°C under standard sea-level pressure.';
     }
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
     valFahrenheitEl.textContent = '--';
     valKelvinEl.textContent = '--';
     absoluteZeroAlert.style.display = 'none';
-    sensationEmojiEl.textContent = '🌡️';
+  
     sensationTitleEl.textContent = 'Awaiting Temperature Input';
     sensationDescEl.textContent = 'Enter any numeric degree value above to see conversions.';
   }
